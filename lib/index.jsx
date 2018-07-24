@@ -132,7 +132,7 @@ class DatetimeRangePicker extends Component {
     const date = moment(props.key, 'M_D');
 
     // style all dates in range
-    let classes = date.isBetween(start, end, 'day')
+    let classes = date.isBetween(start.subtract(1, 'day'), end, 'day')
       ? `${props.className} in-selecting-range` : props.className;
 
     // add rdtActive to selected startdate and endDate in pickers
